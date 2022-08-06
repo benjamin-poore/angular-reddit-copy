@@ -1,0 +1,29 @@
+<div class="col-span-3 bg-gray-400 text-center rounded shadow font-bold px-2 py-3">
+  <div class="text-2xl">
+    {{ article.votes }}
+  </div>
+  <div class="text-xs">
+    POINTS
+  </div>
+</div>
+<div class="col-span-9 px-2 py-3">
+  <div class="font-bold text-lg">
+    {{ article.title }}
+  </div>
+  <div class="text-xs">
+    ({{ article.domain() }})
+  </div>
+  <ul class="grid grid-cols-12">
+    <li class="col-span-4 col-start-3">
+      <span (click)="onVoteUp()" class="cursor-pointer">
+        <fa-icon [icon]="faArrowUp"></fa-icon> upvote
+      </span>
+    </li>
+    <li class="col-span-4 col-start-8">
+      <span (click)="onVoteDown()" class="cursor-pointer">
+        <fa-icon [icon]="faArrowDown"></fa-icon> downvote
+      </span>
+    </li>
+  </ul>
+</div>
+
